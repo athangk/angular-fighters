@@ -3,7 +3,7 @@
 #### ng serve --open
 
 # Fighters n Arena
-Angular project with ngrx store and effects. 
+Angular project with ngrx store and effects. Api calls with in memory service and drag and drop of items.
 
 The fighters are displayed from an api call and then added to the ngrx store.\
 User can add them to the arena where they can start the fight.\
