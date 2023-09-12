@@ -12,26 +12,26 @@ Drag and drop is available that changes the order of the fight.
 
 #### - Add fighters to arena
 <p float=left>
-<img src="https://github.com/athangk/angular-fighters/blob/main/Part#1_13.gif" width="640">
+<img src="https://github.com/athangk/angular-fighters/blob/main/Part%231_13.gif" width="640">
   </p>
 
   #### - Drag order of fighters and fight
 <p float=left>
-<img src="https://github.com/athangk/angular-fighters/blob/main/Part#1_1_18.gif" width="640">
+<img src="https://github.com/athangk/angular-fighters/blob/main/Part%231_1_8.gif" width="640">
   </p>
 
 #### - Create a new custom fighter
-<p float=left>
-<img src="https://github.com/athangk/angular-fighters/blob/main/Part#1_14.gif" width="640">
+<p float=left> 
+<img src="https://github.com/athangk/angular-fighters/blob/main/Part%231_14.gif" width="640">
   </p>
 
 #### - Routing with fighter Id and display their story
 <p float=left>
-<img src="https://github.com/athangk/angular-fighters/blob/main/Part#1_3_2.gif" width="640">
+<img src="https://github.com/athangk/angular-fighters/blob/main/Part%231_3_2.gif" width="640">
   </p>
 
 
 #### - Remove a fighter and fight with the rest
 <p float=left>
-<img src="https://github.com/athangk/angular-fighters/blob/main/Part#1_4_4.gif" width="640">
+<img src="https://github.com/athangk/angular-fighters/blob/main/Part%231_4_4.gif" width="640">
   </p>
