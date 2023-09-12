@@ -5,8 +5,8 @@
 # Fighters n Arena
 Angular project with ngrx store and effects. 
 
-Fighters displayed from api call and then added by user action to the arena where they can fight.
-The fight is based on a random pick, that chooses one of their stats (kick, fist, weapon)
+Fighters displayed from api call and then added by user action to the arena where they can fight.\
+The fight is based on a random pick, that chooses one of their stats (kick, fist, weapon)\
 Drag and drop is available that changes the order of the fight.
 
 
