@@ -1,0 +1,48 @@
+<mat-card-header>
+  <div class="round-background-letter"></div>
+  <ng-container *ngIf="isDetailMode; else detailMode">
+    <a routerLink="/detail/{{ fighter.id }}" class="fighter-name-link">
+      {{ fighter.name }} fighter
+    </a>
+  </ng-container>
+  <ng-template #detailMode>
+    {{ fighter.name }}
+  </ng-template>
+</mat-card-header>
+<mat-card-content>
+  <div class="images-container">
+    <span> <img class="images" [src]="'assets/svg/' + fighter.image" /></span>
+  </div>
+
+  <div>Kick:</div>
+  <mat-progress-bar
+    color="accent"
+    mode="determinate"
+    value="{{ fighter.stats.kick }}"
+  ></mat-progress-bar>
+  <div>weapon:</div>
+  <mat-progress-bar
+    color="accent"
+    mode="determinate"
+    value="{{ fighter.stats.weapon }}"
+  ></mat-progress-bar>
+  <div>fist:</div>
+  <mat-progress-bar
+    color="accent"
+    mode="determinate"
+    value="{{ fighter.stats.fist }}"
+  ></mat-progress-bar>
+</mat-card-content>
+
+<mat-card-actions *ngIf="!!buttonActionType">
+  <div class="actionContainer">
+    <button
+      data-test="choose-button"
+      mat-raised-button
+      color="accent"
+      (click)="this.chosenFighter.emit(fighter)"
+    >
+      {{ buttonActionType }}
+    </button>
+  </div>
+</mat-card-actions>

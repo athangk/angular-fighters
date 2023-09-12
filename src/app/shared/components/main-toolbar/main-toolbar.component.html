@@ -1,0 +1,29 @@
+<div>
+  <mat-toolbar color="primary">
+    <span class="toolbar-spacer"></span>
+    <nav class="nav-class">
+      <a routerLink="/fighter-list" class="nav-dashboard-links"
+        ><div
+          matBadge="{{ badgeNumberFighters }}"
+          matBadgeSize="medium"
+          matBadgeColor="accent"
+        >
+          <span class="nav-label">Fighters</span
+          ><img
+            width="20px"
+            src="assets/svg/default_fighter_grey_arena.svg"
+          /></div
+      ></a>
+
+      <a routerLink="/arena" class="nav-dashboard-links">
+        <div
+          matBadge="{{ badgeNumberArena }}"
+          matBadgeSize="medium"
+          matBadgeColor="accent"
+        >
+          <span class="nav-label">Arena</span
+          ><img width="20px" src="assets/svg/default_fighter_arena.svg" /></div
+      ></a>
+    </nav>
+  </mat-toolbar>
+</div>

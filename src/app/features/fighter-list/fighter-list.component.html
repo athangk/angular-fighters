@@ -1,0 +1,33 @@
+<div class="spinner" *ngIf="!hasData && (isLoading$ | async)">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div class="container" *ngIf="!(isLoading$ | async)">
+  <div class="actionContainer">
+    <button mat-raised-button color="accent" (click)="openDialog()">
+      Create new one
+    </button>
+  </div>
+  <div>
+    <div class="card-container">
+      <mat-card
+        class="card-item"
+        color="primary"
+        *ngFor="
+          let fighter of fighters$ | async;
+          let indexOfelement = index;
+          trackBy: trackByFn
+        "
+      >
+        <app-fighter-content
+          [fighter]="fighter"
+          (chosenFighter)="addFighter(fighter)"
+          buttonActionType="Add"
+          [isDetailMode]="true"
+        ></app-fighter-content>
+      </mat-card>
+    </div>
+
+    <!-- </div> -->
+  </div>
+</div>

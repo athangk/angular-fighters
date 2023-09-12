@@ -1,0 +1,32 @@
+.spinner {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.container {
+  display: "flex";
+  margin: 40px;
+  padding: 20px;
+}
+
+.grid-title {
+  margin-top: 20px;
+}
+
+::ng-deep {
+  .modalbox-create-fighter {
+    font-size: 13px;
+    color: black;
+    text-transform: uppercase;
+    background: red;
+  }
+  .mat-mdc-dialog-container .mdc-dialog__surface {
+    background: #e9e406 !important;
+    padding: 40px;
+    font-size: 13px;
+    color: black;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,51 @@
+<div class="arena-container">
+  <div class="card-container fx-50">
+    <div cdkDropList (cdkDropListDropped)="drop($event)">
+      <mat-card
+        class="card-item"
+        *ngFor="let fighter of fightersArena$ | async; trackBy: trackByFn"
+        cdkDrag
+      >
+        <app-fighter-content
+          [fighter]="fighter"
+          (chosenFighter)="removeFighter(fighter)"
+          buttonActionType="remove"
+        ></app-fighter-content>
+      </mat-card>
+    </div>
+  </div>
+  <div class="result-container" *ngIf="fightersArena$ | async as fighters">
+    <button
+      (click)="fight()"
+      mat-raised-button
+      color="accent"
+      [disabled]="fighters.length < 2"
+    >
+      FIGHT
+    </button>
+    <div *ngIf="winner">
+      <div class="result-fight-round-labels">Round {{ countRound }}</div>
+      <div *ngFor="let fightRound of fightRounds; trackBy: trackByFn">
+        <div class="result-fight-round">{{ fightRound }}</div>
+      </div>
+      <div class="result-fight-round-labels">Winner is</div>
+      <div class="card-container">
+        <mat-card class="card-item">
+          <mat-card-header>
+            <div class="round-background-letter"></div>
+            <a routerLink="/detail/{{ winner.id }}" class="fighter-name-link">
+              {{ winner.name }} fighter
+            </a>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="container-images-winner">
+              <span>
+                <img class="images" [src]="'assets/svg/' + winner.image"
+              /></span>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

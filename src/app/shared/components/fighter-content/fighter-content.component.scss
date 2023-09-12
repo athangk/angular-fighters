@@ -1,0 +1,38 @@
+mat-card-header {
+  font-size: 16px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  max-width: 100px;
+}
+
+mat-card-content {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 30px;
+  color: "#1cc7c1";
+  font-size: 12px;
+}
+
+mat-card-content {
+  margin: 20px;
+}
+
+.images-container {
+  display: flex;
+  justify-content: center;
+}
+
+.images-container::before {
+  width: 20px;
+  height: 20px;
+  background: red;
+  top: 4px;
+  position: absolute;
+  left: 4px;
+  z-index: -1;
+  content: "";
+  border-radius: 40px;
+}

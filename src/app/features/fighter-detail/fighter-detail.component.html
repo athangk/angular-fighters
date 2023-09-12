@@ -1,0 +1,14 @@
+<div class="fighter-container-detail" *ngIf="fighter">
+  <div class="fighter-detail">
+    <div>
+      <app-fighter-content
+        [fighter]="fighter"
+        [isDetailMode]="false"
+      ></app-fighter-content>
+      <div class="fighter-story">
+        {{ fighter.story }}
+      </div>
+      <button mat-raised-button color="accent" (click)="goBack()">back</button>
+    </div>
+  </div>
+</div>

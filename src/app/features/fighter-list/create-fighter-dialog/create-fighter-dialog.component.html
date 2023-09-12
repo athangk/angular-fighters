@@ -1,0 +1,134 @@
+<div class="card-form-creator-fighter">
+  <h1 mat-dialog-title class="dialog-heading">Create your fighter</h1>
+  <div mat-dialog-content class="card-form-creator-fighter">
+    <form [formGroup]="fighterForm" (ngSubmit)="onSubmit()">
+      <mat-form-field>
+        <input matInput placeholder="Name" formControlName="name" required />
+      </mat-form-field>
+      <div class="card-form-creator-fighter-errors">
+        <div
+          *ngIf="
+            fighterFormControl.name != null &&
+            fighterFormControl.name.invalid &&
+            (fighterFormControl.name.dirty || fighterFormControl.name.touched)
+          "
+        >
+          <span *ngIf="fighterFormControl.name.errors?.['required']">
+            Name is required.
+          </span>
+
+          <span *ngIf="fighterFormControl.name.errors?.['minlength']">
+            Name must be at least 4 characters long.
+          </span>
+        </div>
+      </div>
+
+      <mat-form-field>
+        <mat-label>Type of color</mat-label>
+        <mat-select formControlName="image">
+          <mat-option
+            [value]="fighterImage.value"
+            *ngFor="let fighterImage of fighterImageList"
+            >{{ fighterImage.option }}
+          </mat-option>
+        </mat-select>
+        <div class="card-form-creator-fighter-errors">
+          <span
+            *ngIf="fighterFormControl.image.errors?.['required'] && fighterFormControl.image.touched"
+          >
+            Type of color is required.</span
+          >
+        </div>
+      </mat-form-field>
+      <div>
+        <span *ngIf="!!fighterFormControl.image.value">
+          <img
+            class="images"
+            [src]="'assets/svg/' + fighterFormControl.image.value"
+        /></span>
+      </div>
+
+      <div class="stats-container">
+        <label class="stats-label">Kick</label>
+        <mat-slider min="1" max="100" step="10">
+          <input matSliderThumb formControlName="kick" />
+        </mat-slider>
+        <div class="card-form-creator-fighter-errors">
+          <span *ngIf="fighterFormControl.kick.errors?.['min']"
+            >Value should start from 10.</span
+          >
+        </div>
+      </div>
+      <div class="stats-container">
+        <label class="stats-label">Fist</label>
+        <mat-slider min="0" max="100" step="10">
+          <input matSliderThumb formControlName="fist" />
+        </mat-slider>
+        <div class="card-form-creator-fighter-errors">
+          <span *ngIf="fighterFormControl.fist.errors?.['min']">
+            Value should start from 10.
+          </span>
+        </div>
+      </div>
+      <div class="stats-container">
+        <label class="stats-label">Weapon</label>
+        <mat-slider min="0" max="100" step="10">
+          <input matSliderThumb formControlName="weapon" />
+        </mat-slider>
+        <div class="card-form-creator-fighter-errors">
+          <span *ngIf="fighterFormControl.weapon.errors?.['min']">
+            Value should start from 10.
+          </span>
+        </div>
+      </div>
+
+      <mat-form-field class="example-full-width">
+        <textarea
+          matInput
+          placeholder="the story"
+          formControlName="story"
+          required
+        ></textarea>
+      </mat-form-field>
+      <div class="card-form-creator-fighter-errors">
+        <div
+          *ngIf="
+            fighterFormControl.story != null &&
+            fighterFormControl.story.invalid &&
+            (fighterFormControl.story.dirty || fighterFormControl.story.touched)
+          "
+          class="alert alert-danger"
+        >
+          <span *ngIf="fighterFormControl.story.errors?.['required']">
+            Story is required.
+          </span>
+
+          <span *ngIf="fighterFormControl.story.errors?.['minlength']">
+            Story must be at least 20 characters long.
+          </span>
+        </div>
+      </div>
+
+      <div mat-dialog-actions class="container-create-fighter-btns">
+        <button
+          color="primary"
+          mat-raised-button
+          (click)="onNoClick()"
+          mat-dialog-close
+        >
+          Cancel
+        </button>
+        <button
+          color="primary"
+          class="primary"
+          mat-raised-button
+          [disabled]="!fighterForm.valid"
+          cdkFocusInitial
+          type="submit"
+        >
+          Ok
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

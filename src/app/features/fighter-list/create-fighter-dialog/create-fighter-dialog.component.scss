@@ -1,0 +1,42 @@
+.card-form-creator-fighter {
+  width: 260px !important;
+  width: 100%;
+  background: #e7511f;
+  height: 100%;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.card-form-creator-fighter-errors {
+  font-size: 12px;
+  color: yellow;
+  width: 100%;
+  min-height: 24px;
+  margin-bottom: 10px;
+}
+.dialog-heading {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: white;
+}
+
+label {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: white;
+  width: 80px;
+}
+
+.container-create-fighter-btns {
+  display: flex;
+  justify-content: space-between;
+  max-width: 240px;
+}
+
+.stats-container {
+  display: flex;
+  align-items: center;
+}
+.stats-label {
+  width: 160px;
+}

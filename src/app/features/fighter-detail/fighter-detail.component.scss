@@ -1,0 +1,19 @@
+.fighter-container-detail {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.fighter-detail {
+  max-width: 500px;
+  margin: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.fighter-story {
+  margin-top: 40px;
+  font-style: italic;
+  text-transform: uppercase;
+}
