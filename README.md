@@ -36,6 +36,7 @@ A route to the fighter unique page with their story shown
 
 
 #### - Remove a fighter and fight with the rest
+In the arena before the fight the fighters can be removed and thrown back to the fighters list as shown in the toolbar badges.
 <p float=left>
 <img src="https://github.com/athangk/angular-fighters/blob/main/Part%231_4_4.gif" width="640">
   </p>
